@@ -187,6 +187,15 @@ namespace VendingMachine.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Solde machine restant:.
+        /// </summary>
+        internal static string MachineBalanceText {
+            get {
+                return ResourceManager.GetString("MachineBalanceText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Le distributeur automatique est prêt à l&apos;emploi..
         /// </summary>
         internal static string MachineReadyText {

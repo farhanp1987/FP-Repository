@@ -15,5 +15,6 @@ namespace VendingMachine
         public void DisplaySaleRecords();
         public void CancelTransaction();
         public void ChangeLanguage();
+
     }
 }

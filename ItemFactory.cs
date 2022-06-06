@@ -16,6 +16,7 @@ namespace VendingMachine
             cachedItems.Add("Chips", new Item("Chips", 0.50));
             cachedItems.Add("Candy", new Item("Candy", 0.65));
         }
+
         public static Item GetItem(string key)
         {
             if (cachedItems.Count == 0)

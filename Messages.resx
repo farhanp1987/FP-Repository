@@ -159,6 +159,9 @@
   <data name="LanguageName" xml:space="preserve">
     <value>English</value>
   </data>
+  <data name="MachineBalanceText" xml:space="preserve">
+    <value>Machine balance remaining:</value>
+  </data>
   <data name="MachineReadyText" xml:space="preserve">
     <value>Vending Machine is ready to use.</value>
   </data>

@@ -20,13 +20,6 @@ namespace VendingMachine
         FrenchLanguage frenchLanguage;
         #endregion
 
-        #region Resource Variables
-        public string invalidInput = string.Empty;
-        public string enterLanguageTxt = string.Empty;
-        public string languageChangedTxt = string.Empty;
-        public string languageName = string.Empty;
-        #endregion
-
         public VendingMachine()
         {
             this.machineItems = new Dictionary<Item, int>();
@@ -64,7 +57,7 @@ namespace VendingMachine
 
         public void DisplayMachineBalance()
         {
-            PrintMessage(string.Format("Machine has {0}E remaining.", machineBank), ConsoleColor.Green);
+            PrintMessage(string.Format("{0} {1}E", Language.machineBalanceTxt, machineBank), ConsoleColor.Green);
         }
 
         public void ShowProducts()

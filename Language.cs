@@ -24,6 +24,7 @@ namespace VendingMachine
         public static string enterLanguageTxt = string.Empty;
         public static string languageChangedTxt = string.Empty;
         public static string languageName = string.Empty;
+        public static string machineBalanceTxt = string.Empty;
         #endregion
 
         public static void SetMessagesByLanguage()
@@ -43,6 +44,7 @@ namespace VendingMachine
             enterLanguageTxt = Properties.Messages.EnterLanguageText;
             languageChangedTxt = Properties.Messages.LanguageChangedText;
             languageName = Properties.Messages.LanguageName;
+            machineBalanceTxt = Properties.Messages.MachineBalanceText;
         }
     }
 
@@ -65,6 +67,7 @@ namespace VendingMachine
             Language.languageChangedTxt = Properties.Messages_DE.LanguageChangedText;
             Language.invalidInput = Properties.Messages_DE.InvalidInput;
             Language.languageName = Properties.Messages_DE.LanguageName;
+            Language.machineBalanceTxt = Properties.Messages_DE.MachineBalanceText;
         }
     }
 
@@ -87,6 +90,7 @@ namespace VendingMachine
             Language.languageChangedTxt = Properties.Messages_FR.LanguageChangedText;
             Language.invalidInput = Properties.Messages_FR.InvalidInput;
             Language.languageName = Properties.Messages_FR.LanguageName;
+            Language.machineBalanceTxt = Properties.Messages_FR.MachineBalanceText;
         }
     }
 }

@@ -39,6 +39,7 @@ namespace VendingMachine
 
             PrintMessage(Language.initializeMachineTxt, ConsoleColor.Cyan);
             PrintMessage(Language.machineReadyTxt, ConsoleColor.Cyan);
+
             RequestUserCommand(vendingMachine);
         }
 

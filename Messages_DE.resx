@@ -159,6 +159,9 @@
   <data name="LanguageName" xml:space="preserve">
     <value>Deutsch</value>
   </data>
+  <data name="MachineBalanceText" xml:space="preserve">
+    <value>Verbleibende Maschinenbilanz:</value>
+  </data>
   <data name="MachineReadyText" xml:space="preserve">
     <value>Verkaufsautomat ist einsatzbereit.</value>
   </data>

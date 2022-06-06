@@ -9,7 +9,6 @@ namespace VendingMachine
     public class Item
     {
         private static int totalItemCount = 1;
-
         protected readonly int itemID;
         protected readonly string itemName;
         protected readonly double itemPrice;
