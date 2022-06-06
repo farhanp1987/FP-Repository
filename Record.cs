@@ -43,6 +43,7 @@ namespace VendingMachine
             }
         }
     }
+
     public sealed class SaleRecord : Record
     {
         private static int totalSaleRecords = 1;
