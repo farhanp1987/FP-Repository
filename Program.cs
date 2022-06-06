@@ -25,13 +25,20 @@ namespace VendingMachine
         static string invalidCommand = string.Empty;
         #endregion
 
+        #region Global Variables
+        public static Language language = null;
+        public static GermanLanguage germanLanguage = null;
+        public static FrenchLanguage frenchLanguage = null;
+        #endregion
+
         static void Main(string[] args)
-        {            
+        {
             VendingMachine vendingMachine = new VendingMachine();
+            
             SetUserMessagesByLanguage();
 
-            PrintMessage(initializeMachineTxt, ConsoleColor.Cyan);
-            PrintMessage(machineReadyTxt, ConsoleColor.Cyan);
+            PrintMessage(Language.initializeMachineTxt, ConsoleColor.Cyan);
+            PrintMessage(Language.machineReadyTxt, ConsoleColor.Cyan);
             RequestUserCommand(vendingMachine);
         }
 
@@ -39,14 +46,14 @@ namespace VendingMachine
         {
             SetUserMessagesByLanguage();
 
-            PrintMessage(commandHeaderTitle +
-                "\n" + command1Txt +
-                "\n" + command2Txt +
-                "\n" + command3Txt +
-                "\n" + command4Txt +
-                "\n" + command5Txt +
-                "\n" + command6Txt +
-                "\n" + command7Txt, ConsoleColor.Cyan);
+            PrintMessage(Language.commandHeaderTitle +
+                "\n" + Language.command1Txt +
+                "\n" + Language.command2Txt +
+                "\n" + Language.command3Txt +
+                "\n" + Language.command4Txt +
+                "\n" + Language.command5Txt +
+                "\n" + Language.command6Txt +
+                "\n" + Language.command7Txt, ConsoleColor.Cyan);
 
             string userInput = Console.ReadLine();
 
@@ -74,7 +81,7 @@ namespace VendingMachine
                     vendingMachine.CancelTransaction();
                     break;
                 default:
-                    PrintMessage(invalidCommand, ConsoleColor.Red);
+                    PrintMessage(Language.invalidCommand, ConsoleColor.Red);
                     break;
             }
             RequestUserCommand(vendingMachine);
@@ -82,49 +89,19 @@ namespace VendingMachine
 
         public static void SetUserMessagesByLanguage()
         {
-            string cultureName = CultureInfo.CurrentUICulture.Name;
-
-            if (cultureName == "de-DE")
+            if (CultureInfo.CurrentUICulture.Name == "de-DE")
             {
-                initializeMachineTxt = Properties.Messages_DE.InitalizeMachineText;
-                machineReadyTxt = Properties.Messages_DE.MachineReadyText;
-                commandHeaderTitle = Properties.Messages_DE.CommandHeaderTitle;
-                command1Txt = Properties.Messages_DE.Command1Text;
-                command2Txt = Properties.Messages_DE.Command2Text;
-                command3Txt = Properties.Messages_DE.Command3Text;
-                command4Txt = Properties.Messages_DE.Command4Text;
-                command5Txt = Properties.Messages_DE.Command5Text;
-                command6Txt = Properties.Messages_DE.Command6Text;
-                command7Txt = Properties.Messages_DE.Command7Text;
-                invalidCommand = Properties.Messages_DE.InvalidCommand;
+                germanLanguage = new GermanLanguage();
+                germanLanguage.SetMessagesByLanguage();
             }
-            else if (cultureName == "fr-FR")
+            else if (CultureInfo.CurrentUICulture.Name == "fr-FR")
             {
-                initializeMachineTxt = Properties.Messages_FR.InitalizeMachineText;
-                machineReadyTxt = Properties.Messages_FR.MachineReadyText;
-                commandHeaderTitle = Properties.Messages_FR.CommandHeaderTitle;
-                command1Txt = Properties.Messages_FR.Command1Text;
-                command2Txt = Properties.Messages_FR.Command2Text;
-                command3Txt = Properties.Messages_FR.Command3Text;
-                command4Txt = Properties.Messages_FR.Command4Text;
-                command5Txt = Properties.Messages_FR.Command5Text;
-                command6Txt = Properties.Messages_FR.Command6Text;
-                command7Txt = Properties.Messages_FR.Command7Text;
-                invalidCommand = Properties.Messages_FR.InvalidCommand;
+                frenchLanguage = new FrenchLanguage();
+                frenchLanguage.SetMessagesByLanguage();
             }
             else
             {
-                initializeMachineTxt = Properties.Messages.InitalizeMachineText;
-                machineReadyTxt = Properties.Messages.MachineReadyText;
-                commandHeaderTitle = Properties.Messages.CommandHeaderTitle;
-                command1Txt = Properties.Messages.Command1Text;
-                command2Txt = Properties.Messages.Command2Text;
-                command3Txt = Properties.Messages.Command3Text;
-                command4Txt = Properties.Messages.Command4Text;
-                command5Txt = Properties.Messages.Command5Text;
-                command6Txt = Properties.Messages.Command6Text;
-                command7Txt = Properties.Messages.Command7Text;
-                invalidCommand = Properties.Messages.InvalidCommand;
+                Language.SetMessagesByLanguage();
             }
         }
 

@@ -16,6 +16,8 @@ namespace VendingMachine
         private readonly Dictionary<Item, int> machineItems;
         private readonly List<SaleRecord> saleRecords;
         public double machineBank;
+        GermanLanguage germanLanguage;
+        FrenchLanguage frenchLanguage;
         #endregion
 
         #region Resource Variables
@@ -218,12 +220,12 @@ namespace VendingMachine
 
             SetUserMessagesByLanguage();
 
-            PrintMessage(enterLanguageTxt, ConsoleColor.Cyan);
+            PrintMessage(Language.enterLanguageTxt, ConsoleColor.Cyan);
             userInputString = Console.ReadLine();
 
-            if (userInputString != "EN" && userInputString != "en" && userInputString != "DE" && userInputString != "de" && userInputString != "FR" && userInputString != "fr")
+            if (userInputString.ToUpper() != "EN" && userInputString.ToUpper() != "DE" && userInputString.ToUpper() != "FR")
             {
-                PrintMessage(invalidInput, ConsoleColor.Red);
+                PrintMessage(Language.invalidInput, ConsoleColor.Red);
                 return;
             }
 
@@ -246,7 +248,7 @@ namespace VendingMachine
                     break;
             }
             SetUserMessagesByLanguage();
-            PrintMessage(string.Format("{0} {1}", languageChangedTxt, languageName), ConsoleColor.Green);
+            PrintMessage(string.Format("{0} {1}", Language.languageChangedTxt, Language.languageName), ConsoleColor.Green);
         }
 
         public void DispenseItem(Item item, double amountPaid)
@@ -285,7 +287,7 @@ namespace VendingMachine
             machineItems.Clear();
             this.machineItems.Add(ItemFactory.GetItem("Cola"), 15);
             this.machineItems.Add(ItemFactory.GetItem("Chips"), 10);
-            this.machineItems.Add(ItemFactory.GetItem("Candy"), 2);
+            this.machineItems.Add(ItemFactory.GetItem("Candy"), 20);
         }
         
         public void AddSaleRecord(SaleRecord saleRecord)
@@ -314,28 +316,19 @@ namespace VendingMachine
 
         public void SetUserMessagesByLanguage()
         {
-            string cultureName = CultureInfo.CurrentUICulture.Name;
-
-            if (cultureName == "de-DE")
+            if (CultureInfo.CurrentUICulture.Name == "de-DE")
             {
-                enterLanguageTxt = Properties.Messages_DE.EnterLanguageText;
-                languageChangedTxt = Properties.Messages_DE.LanguageChangedText;
-                invalidInput = Properties.Messages_DE.InvalidInput;
-                languageName = Properties.Messages_DE.LanguageName;
+                germanLanguage = new GermanLanguage();
+                germanLanguage.SetMessagesByLanguage();
             }
-            else if (cultureName == "fr-FR")
+            else if (CultureInfo.CurrentUICulture.Name == "fr-FR")
             {
-                enterLanguageTxt = Properties.Messages_FR.EnterLanguageText;
-                languageChangedTxt = Properties.Messages_FR.LanguageChangedText;
-                invalidInput = Properties.Messages_FR.InvalidInput;
-                languageName = Properties.Messages_FR.LanguageName;
+                frenchLanguage = new FrenchLanguage();
+                frenchLanguage.SetMessagesByLanguage();
             }
             else
             {
-                enterLanguageTxt = Properties.Messages.EnterLanguageText;
-                languageChangedTxt = Properties.Messages.LanguageChangedText;
-                invalidInput = Properties.Messages.InvalidInput;
-                languageName = Properties.Messages.LanguageName;
+                Language.SetMessagesByLanguage();
             }
         }
 
