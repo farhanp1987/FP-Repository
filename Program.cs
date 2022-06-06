@@ -47,28 +47,30 @@ namespace VendingMachine
                 "\n" + command5Txt +
                 "\n" + command6Txt +
                 "\n" + command7Txt, ConsoleColor.Cyan);
+
             string userInput = Console.ReadLine();
-            switch (userInput)
+
+            switch (userInput.ToUpper())
             {
-                case "BALANCE" or "balance" or "GLEICHGEWICHT" or "gleichgewicht" or "SOLDE" or "solde":
+                case "BALANCE" or "GLEICHGEWICHT" or "SOLDE":
                     vendingMachine.DisplayMachineBalance();
                     break;
-                case "SHOW" or "show" or "AFFICHER" or "afficher":
+                case "SHOW" or "AFFICHER":
                     vendingMachine.ShowProducts();
                     break;
-                case "REFILL" or "refill" or "NACHFÜLLUNG" or "nachfullung" or "RECHARGE" or "recharge":
+                case "REFILL" or "NACHFÜLLUNG" or "RECHARGE":
                     vendingMachine.RefillMachine();
                     break;
-                case "SELECT" or "select" or "AUSWÄHLEN" or "auswahlen" or "SÉLECTIONNER" or "selectionner":
+                case "SELECT" or "AUSWÄHLEN" or "SÉLECTIONNER":
                     vendingMachine.SelectProduct();
                     break;
-                case "HISTORY" or "history" or "GESCHICHTE" or "geschichte" or "HISTOIRE" or "histoire":
+                case "HISTORY" or "GESCHICHTE" or "HISTOIRE":
                     vendingMachine.DisplaySaleRecords();
                     break;
-                case "LANGUAGE" or "language" or "SPRACHE" or "sprache" or "LANGUE" or "langue":
+                case "LANGUAGE" or "SPRACHE" or "LANGUE":
                     vendingMachine.ChangeLanguage();
                     break;
-                case "EXIT" or "exit" or "AUSFAHRT" or "ausfahrt" or "SORTIR" or "sortir":
+                case "EXIT" or "AUSFAHRT" or "SORTIR":
                     vendingMachine.CancelTransaction();
                     break;
                 default:

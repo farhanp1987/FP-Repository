@@ -227,14 +227,14 @@ namespace VendingMachine
                 return;
             }
 
-            switch (userInputString)
+            switch (userInputString.ToUpper())
             {
-                case "DE" or "de":
+                case "DE":
                     culture = CultureInfo.CreateSpecificCulture("de-DE");
                     Thread.CurrentThread.CurrentCulture = culture;
                     Thread.CurrentThread.CurrentUICulture = culture;
                     break;
-                case "FR" or "fr":
+                case "FR":
                     culture = CultureInfo.CreateSpecificCulture("fr-FR");
                     Thread.CurrentThread.CurrentCulture = culture;
                     Thread.CurrentThread.CurrentUICulture = culture;
