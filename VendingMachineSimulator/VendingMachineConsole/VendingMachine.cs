@@ -2,11 +2,10 @@
 using System.Globalization;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Threading;
+using VendingMachine.Abstraction;
 
-namespace VendingMachine
+namespace VendingMachine.VendingMachineConsole
 {
     public class VendingMachine : IVendingMachine
     {
