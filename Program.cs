@@ -11,20 +11,6 @@ namespace VendingMachine
 {
     class Program
     {
-        #region Resource Variables
-        static string initializeMachineTxt = string.Empty;
-        static string machineReadyTxt = string.Empty;
-        static string commandHeaderTitle = string.Empty;
-        static string command1Txt = string.Empty;
-        static string command2Txt = string.Empty;
-        static string command3Txt = string.Empty;
-        static string command4Txt = string.Empty;
-        static string command5Txt = string.Empty;
-        static string command6Txt = string.Empty;
-        static string command7Txt = string.Empty;
-        static string invalidCommand = string.Empty;
-        #endregion
-
         #region Global Variables
         public static Language language = null;
         public static GermanLanguage germanLanguage = null;
