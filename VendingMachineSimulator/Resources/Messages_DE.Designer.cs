@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace VendingMachine.Properties {
+namespace VendingMachine.Resources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace VendingMachine.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("VendingMachine.Properties.Messages_DE", typeof(Messages_DE).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("VendingMachine.Resources.Messages_DE", typeof(Messages_DE).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
