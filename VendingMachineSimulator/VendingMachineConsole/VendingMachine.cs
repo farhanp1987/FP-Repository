@@ -7,23 +7,29 @@ using VendingMachine.Abstraction;
 
 namespace VendingMachine.VendingMachineConsole
 {
-    public class VendingMachine : IVendingMachine
+    public sealed class VendingMachine : IVendingMachine
     {
         #region Local Variables
-        public static CultureInfo CurrentCulture { get; set; }
-        public static VendingMachine instance;
+        private static VendingMachine instance;
         private readonly Dictionary<Item, int> machineItems;
         private readonly List<SaleRecord> saleRecords;
-        public double machineBank;
+        private double machineBank;
         GermanLanguage germanLanguage;
         FrenchLanguage frenchLanguage;
         #endregion
 
-        public VendingMachine()
+        private VendingMachine()
         {
             this.machineItems = new Dictionary<Item, int>();
             this.saleRecords = new List<SaleRecord>();
             this.machineBank = 0;
+        }
+
+        public static VendingMachine GetInstance()
+        {
+            if (instance == null)
+                instance = new VendingMachine();
+            return instance;
         }
 
         public double MachineBank
