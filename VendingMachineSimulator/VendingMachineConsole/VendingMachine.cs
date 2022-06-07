@@ -94,7 +94,7 @@ namespace VendingMachine.VendingMachineConsole
 
             if (machineItems.Count == 0)
             {
-                PrintMessage("[ERROR] This vending machine does not have any items in stock. Please refill the machine first.", ConsoleColor.Red);
+                PrintMessage("[ERROR] Vending machine does not have any items in stock. Please refill the machine first.", ConsoleColor.Red);
                 return;
             }
 
