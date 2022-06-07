@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace VendingMachine
+namespace VendingMachine.Abstraction
 {
     public abstract class Language
     {
@@ -29,22 +25,22 @@ namespace VendingMachine
 
         public static void SetMessagesByLanguage()
         {
-            initializeMachineTxt = Properties.Messages.InitalizeMachineText;
-            machineReadyTxt = Properties.Messages.MachineReadyText;
-            commandHeaderTitle = Properties.Messages.CommandHeaderTitle;
-            command1Txt = Properties.Messages.Command1Text;
-            command2Txt = Properties.Messages.Command2Text;
-            command3Txt = Properties.Messages.Command3Text;
-            command4Txt = Properties.Messages.Command4Text;
-            command5Txt = Properties.Messages.Command5Text;
-            command6Txt = Properties.Messages.Command6Text;
-            command7Txt = Properties.Messages.Command7Text;
-            invalidCommand = Properties.Messages.InvalidCommand;
-            invalidInput = Properties.Messages.InvalidInput;
-            enterLanguageTxt = Properties.Messages.EnterLanguageText;
-            languageChangedTxt = Properties.Messages.LanguageChangedText;
-            languageName = Properties.Messages.LanguageName;
-            machineBalanceTxt = Properties.Messages.MachineBalanceText;
+            initializeMachineTxt = Resources.Messages.InitalizeMachineText;
+            machineReadyTxt = Resources.Messages.MachineReadyText;
+            commandHeaderTitle = Resources.Messages.CommandHeaderTitle;
+            command1Txt = Resources.Messages.Command1Text;
+            command2Txt = Resources.Messages.Command2Text;
+            command3Txt = Resources.Messages.Command3Text;
+            command4Txt = Resources.Messages.Command4Text;
+            command5Txt = Resources.Messages.Command5Text;
+            command6Txt = Resources.Messages.Command6Text;
+            command7Txt = Resources.Messages.Command7Text;
+            invalidCommand = Resources.Messages.InvalidCommand;
+            invalidInput = Resources.Messages.InvalidInput;
+            enterLanguageTxt = Resources.Messages.EnterLanguageText;
+            languageChangedTxt = Resources.Messages.LanguageChangedText;
+            languageName = Resources.Messages.LanguageName;
+            machineBalanceTxt = Resources.Messages.MachineBalanceText;
         }
     }
 
@@ -52,22 +48,22 @@ namespace VendingMachine
     {
         public new void SetMessagesByLanguage()
         {
-            Language.initializeMachineTxt = Properties.Messages_DE.InitalizeMachineText;
-            Language.machineReadyTxt = Properties.Messages_DE.MachineReadyText;
-            Language.commandHeaderTitle = Properties.Messages_DE.CommandHeaderTitle;
-            Language.command1Txt = Properties.Messages_DE.Command1Text;
-            Language.command2Txt = Properties.Messages_DE.Command2Text;
-            Language.command3Txt = Properties.Messages_DE.Command3Text;
-            Language.command4Txt = Properties.Messages_DE.Command4Text;
-            Language.command5Txt = Properties.Messages_DE.Command5Text;
-            Language.command6Txt = Properties.Messages_DE.Command6Text;
-            Language.command7Txt = Properties.Messages_DE.Command7Text;
-            Language.invalidCommand = Properties.Messages_DE.InvalidCommand;
-            Language.enterLanguageTxt = Properties.Messages_DE.EnterLanguageText;
-            Language.languageChangedTxt = Properties.Messages_DE.LanguageChangedText;
-            Language.invalidInput = Properties.Messages_DE.InvalidInput;
-            Language.languageName = Properties.Messages_DE.LanguageName;
-            Language.machineBalanceTxt = Properties.Messages_DE.MachineBalanceText;
+            Language.initializeMachineTxt = Resources.Messages_DE.InitalizeMachineText;
+            Language.machineReadyTxt = Resources.Messages_DE.MachineReadyText;
+            Language.commandHeaderTitle = Resources.Messages_DE.CommandHeaderTitle;
+            Language.command1Txt = Resources.Messages_DE.Command1Text;
+            Language.command2Txt = Resources.Messages_DE.Command2Text;
+            Language.command3Txt = Resources.Messages_DE.Command3Text;
+            Language.command4Txt = Resources.Messages_DE.Command4Text;
+            Language.command5Txt = Resources.Messages_DE.Command5Text;
+            Language.command6Txt = Resources.Messages_DE.Command6Text;
+            Language.command7Txt = Resources.Messages_DE.Command7Text;
+            Language.invalidCommand = Resources.Messages_DE.InvalidCommand;
+            Language.enterLanguageTxt = Resources.Messages_DE.EnterLanguageText;
+            Language.languageChangedTxt = Resources.Messages_DE.LanguageChangedText;
+            Language.invalidInput = Resources.Messages_DE.InvalidInput;
+            Language.languageName = Resources.Messages_DE.LanguageName;
+            Language.machineBalanceTxt = Resources.Messages_DE.MachineBalanceText;
         }
     }
 
@@ -75,22 +71,22 @@ namespace VendingMachine
     {
         public new void SetMessagesByLanguage()
         {
-            Language.initializeMachineTxt = Properties.Messages_FR.InitalizeMachineText;
-            Language.machineReadyTxt = Properties.Messages_FR.MachineReadyText;
-            Language.commandHeaderTitle = Properties.Messages_FR.CommandHeaderTitle;
-            Language.command1Txt = Properties.Messages_FR.Command1Text;
-            Language.command2Txt = Properties.Messages_FR.Command2Text;
-            Language.command3Txt = Properties.Messages_FR.Command3Text;
-            Language.command4Txt = Properties.Messages_FR.Command4Text;
-            Language.command5Txt = Properties.Messages_FR.Command5Text;
-            Language.command6Txt = Properties.Messages_FR.Command6Text;
-            Language.command7Txt = Properties.Messages_FR.Command7Text;
-            Language.invalidCommand = Properties.Messages_FR.InvalidCommand;
-            Language.enterLanguageTxt = Properties.Messages_FR.EnterLanguageText;
-            Language.languageChangedTxt = Properties.Messages_FR.LanguageChangedText;
-            Language.invalidInput = Properties.Messages_FR.InvalidInput;
-            Language.languageName = Properties.Messages_FR.LanguageName;
-            Language.machineBalanceTxt = Properties.Messages_FR.MachineBalanceText;
+            Language.initializeMachineTxt = Resources.Messages_FR.InitalizeMachineText;
+            Language.machineReadyTxt = Resources.Messages_FR.MachineReadyText;
+            Language.commandHeaderTitle = Resources.Messages_FR.CommandHeaderTitle;
+            Language.command1Txt = Resources.Messages_FR.Command1Text;
+            Language.command2Txt = Resources.Messages_FR.Command2Text;
+            Language.command3Txt = Resources.Messages_FR.Command3Text;
+            Language.command4Txt = Resources.Messages_FR.Command4Text;
+            Language.command5Txt = Resources.Messages_FR.Command5Text;
+            Language.command6Txt = Resources.Messages_FR.Command6Text;
+            Language.command7Txt = Resources.Messages_FR.Command7Text;
+            Language.invalidCommand = Resources.Messages_FR.InvalidCommand;
+            Language.enterLanguageTxt = Resources.Messages_FR.EnterLanguageText;
+            Language.languageChangedTxt = Resources.Messages_FR.LanguageChangedText;
+            Language.invalidInput = Resources.Messages_FR.InvalidInput;
+            Language.languageName = Resources.Messages_FR.LanguageName;
+            Language.machineBalanceTxt = Resources.Messages_FR.MachineBalanceText;
         }
     }
 }
