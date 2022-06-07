@@ -2,11 +2,12 @@
 using System.Globalization;
 using VendingMachine.Abstraction;
 
-namespace VendingMachine.VendingMachinApp
+namespace VendingMachine.VendingMachineApp
 {
     class Program
     {
         #region Global Variables
+        public static VendingMachine.VendingMachineConsole.VendingMachine vendingMachine;
         public static Language language = null;
         public static GermanLanguage germanLanguage = null;
         public static FrenchLanguage frenchLanguage = null;
@@ -14,17 +15,17 @@ namespace VendingMachine.VendingMachinApp
 
         static void Main(string[] args)
         {
-            VendingMachine.VendingMachineConsole.VendingMachine vendingMachine = new VendingMachine.VendingMachineConsole.VendingMachine();
+            vendingMachine = VendingMachine.VendingMachineConsole.VendingMachine.GetInstance();
             
             SetUserMessagesByLanguage();
 
             PrintMessage(Language.initializeMachineTxt, ConsoleColor.Cyan);
             PrintMessage(Language.machineReadyTxt, ConsoleColor.Cyan);
 
-            RequestUserCommand(vendingMachine);
+            RequestUserCommand();
         }
 
-        public static void RequestUserCommand(VendingMachine.VendingMachineConsole.VendingMachine vendingMachine)
+        public static void RequestUserCommand()
         {
             SetUserMessagesByLanguage();
 
@@ -66,7 +67,7 @@ namespace VendingMachine.VendingMachinApp
                     PrintMessage(Language.invalidCommand, ConsoleColor.Red);
                     break;
             }
-            RequestUserCommand(vendingMachine);
+            RequestUserCommand();
         }
 
         public static void SetUserMessagesByLanguage()
