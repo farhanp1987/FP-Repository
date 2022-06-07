@@ -18,5 +18,3 @@ Interface Segregation Principle
 Singleton Design Pattern
 Factory Design Pattern
 
-
-https://github.com/farhanp1987/FP-Repository.git
