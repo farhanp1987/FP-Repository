@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Resources;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Threading;
-using System.IO;
+using VendingMachine.Abstraction;
 
-[assembly: NeutralResourcesLanguage("en")]
-
-namespace VendingMachine
+namespace VendingMachine.VendingMachinApp
 {
     class Program
     {
@@ -19,7 +14,7 @@ namespace VendingMachine
 
         static void Main(string[] args)
         {
-            VendingMachine vendingMachine = new VendingMachine();
+            VendingMachine.VendingMachineConsole.VendingMachine vendingMachine = new VendingMachine.VendingMachineConsole.VendingMachine();
             
             SetUserMessagesByLanguage();
 
@@ -29,7 +24,7 @@ namespace VendingMachine
             RequestUserCommand(vendingMachine);
         }
 
-        public static void RequestUserCommand(VendingMachine vendingMachine)
+        public static void RequestUserCommand(VendingMachine.VendingMachineConsole.VendingMachine vendingMachine)
         {
             SetUserMessagesByLanguage();
 
